@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Pet} from "../../models/pet.model";
+import {PetTypes} from "../../models/pet-types.enum";
+import {Genders} from "../../models/genders.enum";
 
 @Component({
   selector: 'app-pets-list',
@@ -8,7 +10,7 @@ import {Pet} from "../../models/pet.model";
 })
 export class PetsListComponent implements OnInit {
 
-  pets: Pet[];
+  pets: Pet[] = [{id: '1', userID:'2', name:'Rocky', type:PetTypes.dog, gender:Genders.male, location:'Cairo', breed:'Retriever', birthday:new Date(), picture:'Something', rating:5, numberOfReviews:10}];
   constructor() { }
 
   ngOnInit(): void {
