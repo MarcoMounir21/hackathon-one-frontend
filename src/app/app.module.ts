@@ -3,11 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
+import { PetProfileComponent } from './components/pet-profile/pet-profile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    PetProfileComponent
   ],
   imports: [
     BrowserModule
