@@ -1,0 +1,101 @@
+.create-pet-form {
+  margin: 1rem;
+}
+
+form {
+  background: #ffffff;
+  font-family: Poppins, sans-serif;
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+}
+
+.picture-wrapper {
+  height: 16rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed lightgrey;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.picture-wrapper  button {
+  border: none;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  color: grey;
+  font-size: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.form-group {
+  margin-bottom: 0.5rem;
+}
+
+.field-label {
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  display: inline-block;
+}
+
+.form-control {
+  width: 100%;
+
+  display: flex;
+
+  padding: 1rem;
+
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.25rem;
+
+  margin-bottom: 0.365rem;
+
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  opacity: 0.8;
+
+  height: 3rem;
+}
+
+.gender-radio-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.form-group__buttons {
+  margin: 0 auto;
+}
+
+.btn {
+  font-size: 1rem;
+  line-height: 1.225rem;
+  margin-left: 0.625rem;
+  border: 0;
+  border-radius: 0.5rem;
+
+  width: 4rem;
+  height: 2rem;
+}
+
+.btn.btn__submit {
+  background: #edeafe;
+  color: #6d34d6;
+}
+#male, #female {
+  margin-right: 0.25rem;
+}
+#type {
+  display: block;
+  width: 100%;
+}

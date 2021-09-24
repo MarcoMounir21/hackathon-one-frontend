@@ -4,16 +4,26 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
 import { PetProfileComponent } from './components/pet-profile/pet-profile.component';
+import { CreatePetFormComponent } from './components/create-pet-form/create-pet-form.component';
+import {ReactiveFormsModule} from "@angular/forms";
+import { ApplicationHeaderComponent } from './components/application-header/application-header.component';
+import { PetsListComponent } from './components/pets-list/pets-list.component';
+import {AppRoutingModule} from "./app-routing.module";
 
 @NgModule({
   declarations: [
     AppComponent,
     UserProfileComponent,
-    PetProfileComponent
+    PetProfileComponent,
+    CreatePetFormComponent,
+    ApplicationHeaderComponent,
+    PetsListComponent
   ],
-  imports: [
-    BrowserModule
-  ],
+    imports: [
+        BrowserModule,
+        ReactiveFormsModule,
+        AppRoutingModule,
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

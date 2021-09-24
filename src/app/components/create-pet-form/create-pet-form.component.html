@@ -1,0 +1,91 @@
+<section></section>
+<div class="create-pet-form">
+  <form [formGroup]="petForm" (ngSubmit)="onSubmit()">
+    <div (click)="uploader.click()" class="picture-wrapper" #pictureWrapper>
+      <button [hidden]="hideAddPictureButton">+</button>
+    </div>
+    <br>
+    <div class="form-group form-group__name">
+      <label class="field-label" for="name">Name</label>
+      <input
+        type="text"
+        id="name"
+        [formControlName]="'name'"
+        class="form-control"
+        [placeholder]="'Enter the Name of the Pet'"
+      />
+    </div>
+    <div class="form-group form-group__birthday">
+      <label class="field-label" for="birthday">Birthday</label>
+      <input
+        type="date"
+        id="birthday"
+        [formControlName]="'birthday'"
+        class="form-control"
+        [placeholder]="'Enter the Birthday of the Pet'"
+      />
+    </div>
+    <div class="form-group form-group__gender">
+      <label class="field-label" for="gender">Gender</label>
+      <div class="gender-radio-buttons" id="gender">
+        <div class="radio-button-container">
+          <input
+            class="form-check-input"
+            id="female"
+            type="radio"
+            [formControlName]="'gender'"
+            value="0"
+          > <label for="female">Female</label>
+        </div>
+        <div class="radio-button-container">
+          <input
+            class="form-check-input"
+            id="male"
+            type="radio"
+            [formControlName]="'gender'"
+            value="1"
+          > <label for="male">Male</label>
+        </div>
+      </div>
+    </div>
+    <div class="form-group form-group__type">
+      <label class="field-label" for="type">Type</label>
+      <select id="type" [formControlName]="'type'">
+        <option *ngFor="let petType of petTypes" value="petType.value">{{petType.name}}</option>
+      </select>
+    </div>
+    <div class="form-group form-group__breed">
+      <label class="field-label" for="breed">Breed</label>
+      <input
+        type="text"
+        id="breed"
+        [formControlName]="'breed'"
+        class="form-control"
+        [placeholder]="'Enter the Breed of the Pet'"
+      />
+    </div>
+    <div class="form-group form-group__location">
+      <label class="field-label" for="location">Location</label>
+      <input
+        type="text"
+        id="location"
+        [formControlName]="'location'"
+        class="form-control"
+        [placeholder]="'Enter the Location of the Pet'"
+      />
+    </div>
+    <div class="form-group form-group__photo">
+      <input type="file" hidden #uploader (change)="uploadFile($event)" />
+    </div>
+    <div class="form-group form-group__buttons">
+      <button
+        class="btn btn__submit"
+        type="submit"
+        [disabled]="!petForm.valid"
+      >
+        Add
+      </button>
+      <br><br>
+    </div>
+  </form>
+</div>
